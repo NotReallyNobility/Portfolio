@@ -20,6 +20,12 @@ header, footer {
     min-height: 466px;
 }
 
+#inbetweenAbout {
+    width: 80%;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
 .flex {
     display: flex;
     justify-content: space-around;
@@ -37,12 +43,16 @@ header, footer {
 
 .topOrBottom a {
     background-image: radial-gradient(circle at center, blue, aqua);
-    border-radius: 50%;
     height: fit-content;
     width: fit-content;
+    border-radius: 0%;
     padding: 10px 30px;
     color: black;
     border: 3px solid navy;
+}
+
+#middleLink {
+    margin-top: 20px;
 }
 
 .column {
@@ -59,6 +69,11 @@ header, footer {
     padding: 10px 30px;
     color: navy;
     border: 3px solid silver;
+}
+
+.imageLink {
+    border-radius: 0%;
+    padding: 3px;
 }
 
 a {
@@ -84,4 +99,13 @@ a:hover {
     padding: 10px 30px;
     color: navy;
     border: 3px solid black;
+}
+
+.flex .whiteBack {
+    margin-left: 20px;
+}
+
+.aboutProject {
+    width: 80%;
+    justify-self: center;
 }
