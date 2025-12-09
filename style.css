@@ -1,16 +1,148 @@
+
+/*Start of shared css code for all pages*/
 body {
+    /*Creates a blue gradient for a background, makes the text gold with a shadow for readability, and centers the text. 
+    All text is bolded because it looks nice.*/
     background-image: radial-gradient(circle at center, navy, aqua);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 1px 1px black;
 }
 
-header {
+header, footer {
+    /*Makes the header and footer ovals with a black border and silver/gray gradient background.
+    Uses padding to create proper spacing between it and the contents of the page.*/
     background-image: linear-gradient(to top, silver, grey);
     height: 100px;
     width: 100%;
+    padding-bottom: 20px;
+    justify-items: center;
+    border-radius: 50%;
+    border: 3px solid black;
 }
 
-footer {
-    background-image: linear-gradient(to bottom, silver, grey);
-    height: 100px;
+.topOrBottom {
+    /*Makes sure that the flex containers containing reference links in the header and footer are as wide as the header and footer.*/
     width: 100%;
 }
+
+.topOrBottom a {
+    /*Makes the links in the header and footer blue gradients.
+    The default border is a dark blue.*/
+    background-image: radial-gradient(circle at center, blue, aqua);
+    border-radius: 0%;
+    border-color: navy;
+}
+
+a {
+    /*Makes most links ovals with a black border and a silver/grey gradient background.
+    It makes ALL links wider than they are tall.*/
+    background-image: radial-gradient(circle, silver, grey);
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 30px;
+    color: gold;
+    border: 3px solid black;
+}
+
+a:hover {
+    /*Makes text red when the mouse is over it.*/
+    border-color: red;
+}
+
+#middleLink {
+    /*Just pushes the About page link down a little, for aesthetics.*/
+    margin-top: 20px;
+}
+
+#inbetween {
+    /*Just ensures the footer is always at the bottom of the page.*/
+    min-height: 466px;
+}
+/*End of shared css code for all pages*/
+
+
+
+/*Start of shared css code for home and index pages*/
+.column {
+    /*Makes it so that certain flex containers are displayed as columns.*/
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.gameLink {
+    /*Gives the text link for games a silver border.*/
+    border-color:silver;
+}
+
+.imageLink {
+    /*Makes the image links square and gives some padding around the image, so that the gradient background slightly visible.*/
+    border-radius: 0%;
+    padding: 3px;
+}
+/*End of shared css code for home and index pages*/
+
+
+
+/*Start of shared css code for all individual project pages*/
+.aboutProject {
+    /*Makes the contents of the individual project pages 80% the width of the page.*/
+    width: 80%;
+    justify-self: center;
+}
+/*End of shared css code for all individual project pages*/
+
+
+
+/*Start of code for all flex containers, simply creates a flex container with the space-around property*/
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+/*End of code for all flex containers*/
+
+
+
+/*Start of styling for paragraphs, named whiteBack since the background is made white so the text stands out more.*/
+.whiteBack {
+    /*Gives a rounded corner and a black border.*/
+    background-image: radial-gradient(circle, white, silver);
+    border-radius: 10%;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 30px;
+    color: navy;
+    border: 3px solid black;
+}
+
+.flex .whiteBack {
+    /*Just makes sure that there's proper space between the image and the text in the project specific pages.*/
+    margin-left: 20px;
+}
+/*End of styling for paragraphs*/
+
+
+
+
+/*Start of css code for the about only*/
+#inbetweenAbout {
+    /*Makes the about page's contents fit 80% of the pages width and gives proper spacing between the header and footer.*/
+    width: 80%;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+/*End of css code for the about only*/
+
+
+/*Start of css code for projects page only, just a grid with two columns.*/
+#grid {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+}
+/*End of css code for projects page only*/
